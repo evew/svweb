@@ -100,7 +100,7 @@ class ModelMetaclass(type):
         tableName = attrs.get('__table__',None) or name
         logging.info('found model: %s (table: %s)' %(name, tableName))
 
-        mapping = dict()
+        mappings = dict()
         fields = []
         primaryKey = None
         for k, v in attrs.items():
