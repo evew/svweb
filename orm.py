@@ -120,7 +120,7 @@ class ModelMetaclass(type):
         for k in mappings.keys():
             attrs.pop(k)
 
-        escaped_fileld = list(map(lambda f:'`%s`' %f,fields))
+        escaped_filelds = list(map(lambda f:'`%s`' %f,fields))
 
         attrs['__mappings__'] = mappings
         attrs['__table__'] = tableName
